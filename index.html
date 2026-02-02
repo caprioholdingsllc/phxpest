@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Pest Experts | How We Handle Pest Control Service</title>
+    <meta name="description" content="Pest control in Phoenix. Clear process from inspection to treatment. Scorpions, roaches, ants, and desert pests.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+            color: white;
+            padding: 1rem 2rem;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .phone {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .hero {
+            background: #047857;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .process-intro {
+            max-width: 900px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+        }
+        .process-intro h2 {
+            color: #065f46;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .process-intro p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .process-section {
+            background: #ecfdf5;
+            padding: 3rem 2rem;
+            margin: 0 -2rem 3rem -2rem;
+        }
+        .process-section h2 {
+            text-align: center;
+            color: #065f46;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            position: relative;
+            border-top: 4px solid #047857;
+        }
+        .process-step .step-number {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            background: #065f46;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .process-step h3 {
+            color: #065f46;
+            margin-top: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+        .process-step .timeline {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .process-step p {
+            color: #666;
+            line-height: 1.7;
+        }
+        .services-section {
+            margin: 3rem 0;
+        }
+        .services-section h2 {
+            color: #065f46;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #047857;
+        }
+        .service-card h3 {
+            color: #065f46;
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .desert-note {
+            background: #fef3c7;
+            border-left: 4px solid #fbbf24;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 3rem 0;
+        }
+        .desert-note h3 {
+            color: #92400e;
+            margin-bottom: 0.75rem;
+        }
+        .desert-note p {
+            color: #78350f;
+            line-height: 1.7;
+        }
+        .availability-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 3rem -2rem;
+            border-top: 3px solid #047857;
+            border-bottom: 3px solid #047857;
+        }
+        .availability-section h2 {
+            text-align: center;
+            color: #065f46;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .availability-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #ecfdf5;
+            border-radius: 8px;
+        }
+        .availability-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .availability-card h3 {
+            color: #065f46;
+            margin-bottom: 0.5rem;
+        }
+        .availability-card .time {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #047857;
+            margin: 0.5rem 0;
+        }
+        .form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+        .form-section h2 {
+            color: #065f46;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .form-section .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #047857;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            opacity: 0.95;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Phoenix Pest Experts</div>
+            <div class="phone">📞 (623) 323-8664</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>How We Handle Pest Control Service</h1>
+        <p>A clear, step-by-step approach to eliminating pests and keeping them from coming back.</p>
+    </section>
+
+    <div class="container">
+        <div class="process-intro">
+            <h2>Our Service Process</h2>
+            <p>Effective pest control isn't just spraying chemicals. We follow a systematic process to identify the problem, eliminate current pests, and prevent future infestations.</p>
+        </div>
+
+        <section class="process-section">
+            <h2>From Inspection to Prevention</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Property Inspection</h3>
+                    <div class="timeline">⏱️ 30-45 Minutes</div>
+                    <p>Thorough interior and exterior inspection. Identify pest types, entry points, and harborage areas. Check for conditions attracting pests.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Treatment Plan</h3>
+                    <div class="timeline">⏱️ Reviewed On-Site</div>
+                    <p>Explain what we found and recommended treatment. Discuss treatment methods, safety precautions, and expected timeline for results.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Initial Treatment</h3>
+                    <div class="timeline">⏱️ 1-2 Hours</div>
+                    <p>Apply interior and exterior treatments. Target specific pest types and problem areas. Treat entry points and common harborage zones.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Follow-Up Service</h3>
+                    <div class="timeline">⏱️ 30 Days Later</div>
+                    <p>Return to assess effectiveness and retreat if needed. Most pest problems require 2-3 treatments for complete elimination.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>Pest Control Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Scorpion Control</h3>
+                    <p>Bark scorpions and other desert scorpions. Exterior barrier treatments and interior spot treatments.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Roach Elimination</h3>
+                    <p>German cockroaches and desert roaches. Interior treatments and exterior perimeter control.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ant Control</h3>
+                    <p>Fire ants, carpenter ants, and household ants. Colony elimination and prevention.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Spider Treatment</h3>
+                    <p>Black widows, brown recluse, and common house spiders. Web removal and ongoing prevention.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Rodent Control</h3>
+                    <p>Mice, rats, and pack rats. Trapping, exclusion, and entry point sealing.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Termite Inspection</h3>
+                    <p>Subterranean termite inspections. Treatment referrals for active infestations.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="desert-note">
+            <h3>🌵 Desert Pest Control Specifics</h3>
+            <p><strong>Scorpions:</strong> Most active March-October. Bark scorpions glow under blacklight—we use UV lights for detection. <strong>Monsoon Season:</strong> Heavy rains drive pests indoors seeking shelter. We see more roaches and ants July-September. <strong>Winter Months:</strong> Pests slow down but don't disappear. Rodents seek warm spaces. Year-round service recommended in Phoenix climate.</p>
+        </div>
+
+        <section class="availability-section">
+            <h2>Timeline Expectations</h2>
+            <div class="availability-grid">
+                <div class="availability-card">
+                    <div class="icon">📅</div>
+                    <h3>Initial Service</h3>
+                    <div class="time">1-3 Days</div>
+                    <p>First inspection and treatment scheduled quickly</p>
+                </div>
+                <div class="availability-card">
+                    <div class="icon">🔄</div>
+                    <h3>Follow-Up</h3>
+                    <div class="time">30 Days</div>
+                    <p>Return visit to assess and retreat</p>
+                </div>
+                <div class="availability-card">
+                    <div class="icon">📊</div>
+                    <h3>Full Results</h3>
+                    <div class="time">60-90 Days</div>
+                    <p>Complete pest elimination with ongoing service</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Request Service</h2>
+            <p class="subtitle">Tell us about your pest problem</p>
+            
+            <form id="leadForm" action="https://hook.us2.make.com/gzcbxb8x2e5xph37kjhm48ur4khvh7ir" method="POST">
+                <input type="hidden" name="site_id" value="PHX-PEST-001">
+                <input type="hidden" name="market" value="Phoenix">
+                <input type="hidden" name="industry" value="Pest Control">
+                <input type="hidden" name="lead_type" value="Service Request">
+                <input type="hidden" name="source_url" value="phoenixpestexperts.com">
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Service Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="property_type">Property Type *</label>
+                    <select id="property_type" name="property_type" required>
+                        <option value="">Select...</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Commercial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pest_type">Main Pest Problem *</label>
+                    <select id="pest_type" name="pest_type" required>
+                        <option value="">Select...</option>
+                        <option value="Scorpions">Scorpions</option>
+                        <option value="Roaches">Roaches</option>
+                        <option value="Ants">Ants</option>
+                        <option value="Spiders">Spiders</option>
+                        <option value="Rodents">Rodents</option>
+                        <option value="Multiple Pests">Multiple Pests</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Problem Description *</label>
+                    <textarea id="details" name="details" required placeholder="Describe what pests you're seeing and where..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Request Service</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Phoenix Pest Experts. Professional Pest Control.</p>
+    </footer>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                window.location.href = 'thanks.html';
+            }).catch(() => {
+                window.location.href = 'thanks.html';
+            });
+        });
+    </script>
+</body>
+</html>
